@@ -57,3 +57,4 @@
               state: present
               type: iso
               iso_path: "[datastore1]/ubuntu-20.04.5-live-server-amd64.iso"
+          resource_pool: "{{ vm_resource_pool }}"
