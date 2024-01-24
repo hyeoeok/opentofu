@@ -1,11 +1,19 @@
 vcenter_hostname: "192.168.20.10"
+vcenter_datacenter: "Datacenter"
+vcenter_validate_certs: false
 vcenter_username: "administrator@sand.com"
 vcenter_password: "Cloud1234!@#$"
-datacenter_name: "Datacenter"
-vm_name: "testtesttest"
-guest_os_id: "ubuntu64guest"  # Refer to VMware documentation for valid values
-disk_size_gb: 20
-datastore_name: "datastore1"
-memory_mb: 2048
-num_cpus: 2
-network_name: "VM Network"
+vm_name: "test-awx"
+vm_guestid: "ubuntu64Guest"
+vm_disk_gb: 30
+vm_disk_type: "thin"
+vm_disk_datastore: "datastore1"
+vm_hw_ram_mb: 8192
+vm_hw_cpu_n: 4
+vm_hw_scsi: "paravirtual"
+vm_net_name: "VM Network"
+#vm_net_type: "vmxnet3"
+vm_net_type: "vmnic2"
+vcenter_destination_folder: "test-jhs"
+vm_state: "poweredon"
+vm_resource_pool: "새 리소스 풀"
