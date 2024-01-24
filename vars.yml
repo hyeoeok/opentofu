@@ -1,0 +1,11 @@
+vcenter_hostname: "192.168.20.10"
+vcenter_username: "administrator@sand.com"
+vcenter_password: "Cloud1234!@#$"
+datacenter_name: "Datacenter"
+vm_name: "testtesttest"
+guest_os_id: "ubuntu64guest"  # Refer to VMware documentation for valid values
+disk_size_gb: 20
+datastore_name: "datastore1"
+memory_mb: 2048
+num_cpus: 2
+network_name: "VM Network"

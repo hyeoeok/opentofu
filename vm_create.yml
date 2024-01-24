@@ -1,0 +1,33 @@
+---
+- name: Create VM on vCenter
+  hosts: localhost
+  gather_facts: False
+  tasks:
+    - name: Include external variables
+      include_vars:
+        file: vars.yml
+
+    - name: Connect to vCenter
+      community.vmware.vmware_about_facts:
+
+    - name: Create VM
+      community.vmware.vmware_vm:
+        hostname: "{{ vcenter_hostname }}"
+        username: "{{ vcenter_username }}"
+        password: "{{ vcenter_password }}"
+        datacenter_name: "{{ datacenter_name }}"
+        validate_certs: no
+        name: "{{ vm_name }}"
+        state: poweredon  # Specify the desired power state
+        guest_id: "{{ guest_os_id }}"
+        disk:
+          - size_gb: "{{ disk_size_gb }}"
+            type: thin
+            datastore: "{{ datastore_name }}"
+        hardware:
+          memory_mb: "{{ memory_mb }}"
+          num_cpus: "{{ num_cpus }}"
+          scsi: paravirtual
+          network:
+            - name: "{{ network_name }}"
+              start_connected: yes
