@@ -1,8 +1,8 @@
 ---
-- name: Create VM on vCenter
-  hosts: localhost
-  gather_facts: False
-  tasks:
+    - name: Create VM on vCenter
+      hosts: localhost
+      gather_facts: False
+      tasks:
     - name: Include external variables
       include_vars:
         file: vars.yml
