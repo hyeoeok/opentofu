@@ -44,8 +44,8 @@
           networks:
             - name: "{{ vm_net_name }}"
               device_name: "{{ vm_net_type }}"
-              ip: ""
-              netmask: ""
+              ip: "192.168.20.166"
+              netmask: "255.255.255.0"
               #            - name: "{{ vm_net_name }}"
               #              device_name: "{{ vm_net_type }}"
               #              ip: ""
