@@ -3,7 +3,7 @@
   hosts: localhost
   become: false
   gather_facts: false
-    vars_prompt:
+  vars_prompt:
     - name: vm_name
       prompt: "Enter VM Name"
       private: no
